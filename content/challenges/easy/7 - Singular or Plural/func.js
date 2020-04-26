@@ -4,5 +4,9 @@
 // This is an oversimplification of the English language. We are ignoring edge cases like "goose" and "geese", "fungus" and "fungi", etc.
 
 module.exports = (word) => {
-
+if (word.endsWith('s')){
+    return true;
+} else {
+    return false;
+}
 };
