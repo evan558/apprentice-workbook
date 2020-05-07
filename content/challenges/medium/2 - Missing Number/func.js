@@ -3,4 +3,10 @@
 //   - The array of numbers will be unsorted (not in order).
 //   - Only one number will be missing.
 module.exports = (arr) => {
+    let missing = null;
+    let sum = 0;
+    for (i = 0; i < arr.length; i++){ 
+        sum += arr[i];     
+ } missing = 55-sum;
+ return missing;
 }
