@@ -42,17 +42,17 @@ module.exports = (cards) => {
             case 'K':
             case 10:
                 sum += 10
-            break;
-            case 'A':{
-                sum+=11;
+                break;
+            case 'A': {
+                sum += 11;
                 foundAce = true;
             }
         }
     }
-    if (sum>21){
-        if(foundAce==true){
-            return sum - 10>21;
+    if (sum > 21) {
+        if (foundAce == true) {
+            return sum - 10 > 21;
         } return true;
-    } 
+    }
     return false;
 };

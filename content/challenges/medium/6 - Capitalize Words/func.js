@@ -17,13 +17,13 @@ module.exports = (str) => {
             wordArr.push(tempWord);
         }
     }
-    let capWord = '';
-    for (index = 0; index < wordArr.length; index++){
+    let finalStr = '';
+    for (let index = 0; index < wordArr.length; index++) {
         const curWord = wordArr[index];
-        capWord += curWord[0].toUpperCase() + curWord.substr(1);
+        finalStr += curWord[0].toUpperCase() + curWord.substr(1);
         if (index < wordArr.length -1){
-            capWord += ' ';
+            finalStr += ' ';
         }
     }
-    return capWord;
+    return finalStr;
 }

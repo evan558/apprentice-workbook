@@ -4,4 +4,22 @@
 // Notes:
 //   - You can expect a valid string to be provided for each test case.
 module.exports = (str) => {
+    let newStr = '';
+    let wordArr = str.split(' ');
+    for (i = 0; i < wordArr.length; i++) {
+        let currWord = wordArr[i];
+        if (currWord.length >= 5) {
+            let newWord = '';
+            for (let index = currWord.length - 1; index >= 0; index--) {
+                const currLett = currWord[index];
+                newWord += currLett;
+            }
+            currWord = newWord;
+        }
+        newStr += currWord;
+        if (i < wordArr.length - 1) {
+            newStr += ' ';
+        }
+    }
+    return newStr;
 }
