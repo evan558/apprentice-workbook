@@ -3,10 +3,12 @@
 // Keep the filtered array in the same relative order as the original array of words.
 
 module.exports = (initial, words) => {
-    // let finalArr = [];
-    // let tempArr = [];
-    // for (let i = 0; i < words.length; i++) {
-    //     const newWord = initial + words[i].substring(initial.length - 1)
-    // }
-    // return newWord;
+    let finalArr = [];
+    for (let i = 0; i < words.length; i++) {
+        const newWord = initial + words[i].substring(initial.length);
+        if (newWord === words[i]){
+            finalArr.push(words[i]);
+        }
+    }
+    return finalArr;
 }
