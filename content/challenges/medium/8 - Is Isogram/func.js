@@ -5,4 +5,18 @@
 //   - Ignore letter case (should not be case sensitive).
 //   - All test cases contain valid one word strings.
 module.exports = (str) => {
+    let foundCharacters = [];
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        for (let x = 0; x < foundCharacters.length; x++) {
+            const curFound = foundCharacters[x];
+            if (curFound.toUpperCase() === char.toUpperCase()) {
+                return false
+            }
+        }   
+        foundCharacters.push(char);
+    }
+    return true;
 }
+
+
