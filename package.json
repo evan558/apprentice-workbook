@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "concurrently -k \"jest --config=jest.config.json --watchAll\" \"live-server -q --watch=./reporter/index.html --open=/reporter\"",
+    "auto": "node test-selector -l e -n 5",
     "test:e1": "concurrently -k \"jest \\\"content/challenges/easy/1 - Before Noon/func.test.js\\\" --config=jest.config.json --watchAll\" \"live-server -q --watch=./reporter/index.html --open=/reporter\"",
     "test:e2": "concurrently -k \"jest \\\"content/challenges/easy/2 - Life Stages/func.test.js\\\" --config=jest.config.json --watchAll\" \"live-server -q --watch=./reporter/index.html --open=/reporter\"",
     "test:e3": "concurrently -k \"jest \\\"content/challenges/easy/3 - Movies/func.test.js\\\" --config=jest.config.json --watchAll\" \"live-server -q --watch=./reporter/index.html --open=/reporter\"",
