@@ -9,11 +9,7 @@ module.exports = (str) => {
     for (i = 0; i < wordArr.length; i++) {
         let currWord = wordArr[i];
         if (currWord.length >= 5) {
-            let newWord = '';
-            for (let index = currWord.length - 1; index >= 0; index--) {
-                const currLett = currWord[index];
-                newWord += currLett;
-            }
+            let newWord = currWord.split('').reverse().join('');
             currWord = newWord;
         }
         newStr += currWord;
