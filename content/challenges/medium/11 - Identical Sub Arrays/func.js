@@ -3,18 +3,13 @@
 // Notes: 
 //   - Single-element arrays count as (trivially) having identical elements.
 module.exports = (arr) => {
-  let same = 0;
-  for (let i=0; i<arr.length; i++){
-      let identical = true;
-      const currArr = arr[i];
-      for (z=0; z<currArr.length; z++){
-          if (currArr[z] != currArr[0]){
-              identical = false;
-          }
-      }
-      if (identical == true){
-          same += 1; 
-      }
-  }
-  return same;
+    let same = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let identical = true;
+        const currArr = arr[i];
+        if (currArr.every(x => x === currArr[0])){
+            same += 1;
+        }
+    }
+    return same;
 }

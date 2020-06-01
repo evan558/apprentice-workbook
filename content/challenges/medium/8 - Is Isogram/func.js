@@ -13,7 +13,7 @@ module.exports = (str) => {
             if (curFound.toUpperCase() === char.toUpperCase()) {
                 return false
             }
-        }   
+        }
         foundCharacters.push(char);
     }
     return true;
