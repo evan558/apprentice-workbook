@@ -2,13 +2,13 @@
 // Notes: 
 // An empty string counts as a palindrome.
 module.exports = (str) => {
-  function backwards(str) {
-    if (str === '') {
+  function backwards (str) {
+    if (str === ''){
       return str;
     }
     else {
       return backwards(str.substr(1)) + str.charAt(0);
     }
   }
-  return str === backwards(str);
+  return backwards(str) === str;
 }

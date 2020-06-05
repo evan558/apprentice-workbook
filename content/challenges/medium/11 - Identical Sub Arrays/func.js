@@ -5,7 +5,6 @@
 module.exports = (arr) => {
     let same = 0;
     for (let i = 0; i < arr.length; i++) {
-        let identical = true;
         const currArr = arr[i];
         if (currArr.every(x => x === currArr[0])){
             same += 1;

@@ -5,17 +5,12 @@
 //  - F(n) = F(n-2) + F(n-1)
 // Write a function that calculates the nth Fibonacci number.
 module.exports = (n) => {
-  let array = [0, 1]
-  for (let i = 2; i < 100; i++) {
-    array.push(array[i - 1] + array[i - 2]);
-    if (i === n) {
-      return array[i];
+  function fibonacci(num) {
+    if (num < 2) {
+      return num;
     }
-    else if (n === 0) {
-      return 0;
-    }
-    else if (n === 1) {
-      return 1;
-    }
+    return fibonacci(num - 1) + fibonacci(num - 2)
   }
+  return fibonacci(n);
 }
+
