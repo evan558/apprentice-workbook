@@ -3,12 +3,15 @@
 // Notes: 
 //   - You can expect a valid string for each test case.
 module.exports = (str) => {
-    let wordArr = str.split(' ');
-    let newArr = [];
-    for (let i = 0; i < wordArr.length; i++) {
-        const currWord = wordArr[i];
-        let newWord = currWord[0].toUpperCase() + currWord.substring(1);
-        newArr.push(newWord);
-    }
-    return newArr.join(' ');
+    let newStr = str.split(' ').map(value => value[0].toUpperCase() + value.substring(1)).join(' ');
+    return newStr;
 }
+//     let wordArr = str.split(' ');
+//     let newArr = [];
+//     for (let i = 0; i < wordArr.length; i++) {
+//         const currWord = wordArr[i];
+//         let newWord = currWord[0].toUpperCase() + currWord.substring(1);
+//         newArr.push(newWord);
+//     }
+//     return newArr.join(' ');
+// }

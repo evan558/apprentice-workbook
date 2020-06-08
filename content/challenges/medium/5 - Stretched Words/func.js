@@ -3,10 +3,13 @@
 //   - Final strings won't include words with double letters (e.g. "passing", "lottery").
 
 module.exports = (word) => {
-    let newStr = '';
-    for (i = 0; i < word.length; i++) {
-        if (word[i] !== word[i + 1]) {
-            newStr += word[i];
-        } 
-    } return newStr;
+    let newWord = word.split('').filter((value, index, array) => array[index] !== array[index + 1]).join('');
+    return newWord;
 }
+//     let newStr = '';
+//     for (i = 0; i < word.length; i++) {
+//         if (word[i] !== word[i + 1]) {
+//             newStr += word[i];
+//         } 
+//     } return newStr;
+// }
